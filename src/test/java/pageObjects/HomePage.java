@@ -1,12 +1,13 @@
 package pageObjects;
 
+import configs.TestPropertiesConfig;
 import io.qameta.allure.Step;
+import org.aeonbits.owner.ConfigFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import static constants.CommonConstants.BASE_URL;
-
 public class HomePage extends BasePage {
+    TestPropertiesConfig configProperties = ConfigFactory.create(TestPropertiesConfig.class, System.getProperties());
 
     public HomePage(WebDriver driver) {
         super(driver);
@@ -16,7 +17,7 @@ public class HomePage extends BasePage {
     //actions
     @Step("Open homepage")
     private void open() {
-        driver.get(BASE_URL);
+        driver.get(configProperties.getUiBaseUrl());
     }
 
     @Step("Get web title")
