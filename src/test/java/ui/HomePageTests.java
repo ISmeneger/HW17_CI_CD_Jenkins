@@ -7,6 +7,8 @@ import pageObjects.HomePage;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class HomePageTests extends BaseTest {
+    private static final String HOME_PAGE_TITLE = "Hands-On Selenium WebDriver with Java";
+
     @Test
     @DisplayName("Check HomePage page")
     void openHomePageTest() {
@@ -14,6 +16,6 @@ class HomePageTests extends BaseTest {
 
         String actualTitle = homePage.getWebTitle();
 
-        assertEquals("Hands-On Selenium WebDriver with Java", actualTitle);
+        assertEquals(HOME_PAGE_TITLE, actualTitle);
     }
 }
