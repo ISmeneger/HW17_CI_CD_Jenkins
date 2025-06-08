@@ -230,5 +230,4 @@ class WebFormTests extends BaseTest {
         assertEquals(SUBMITTED_FORM_TITLE, title.getText());
         assertEquals(SUBMITTED_FORM_TEXT, submittedText.getText());
     }
-
 }
